@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+.topnav {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 162, 255, 0.863);
+    overflow-x: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: rgba(0, 162, 255, 0.863);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.topnav .topnav-home a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+    transition: text-shadow 0.3s ease;
+    &:hover{
+    color: red;
+
+}
+}
+.topnav .topnav-right{
+    color: #fff;
+    text-align: right;
+    margin-right: 20px;
+}
