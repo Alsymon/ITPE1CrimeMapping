@@ -4,6 +4,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { ScreenComponent } from '../components/screen/screen.component';
 import { LayoutComponent } from './layout.component';
 import { TopnavComponent } from '../components/topnav/topnav.component';
+import { MapComponent } from '../components/maps/maps.component';
 
 
 
@@ -13,6 +14,7 @@ import { TopnavComponent } from '../components/topnav/topnav.component';
     ScreenComponent,
     LayoutComponent,
     TopnavComponent,
+    MapComponent,
   ],
   imports: [
     CommonModule,

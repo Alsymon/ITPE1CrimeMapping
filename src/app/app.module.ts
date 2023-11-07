@@ -9,6 +9,7 @@ import { LoginModule } from './login/login.module';
 import { LayoutModule } from './layout/layout.module';
 import { ScreenComponent } from './components/screen/screen.component';
 import { TopnavComponent } from './components/topnav/topnav.component';
+import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TopnavComponent } from './components/topnav/topnav.component';
     BrowserModule,
     AppRoutingModule,
     LoginModule,
-    LayoutModule
+    LayoutModule,
+    NgxMapLibreGLModule
   ],
   providers: [],
   bootstrap: [AppComponent]
