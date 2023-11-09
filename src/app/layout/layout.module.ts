@@ -5,6 +5,8 @@ import { ScreenComponent } from '../components/screen/screen.component';
 import { LayoutComponent } from './layout.component';
 import { TopnavComponent } from '../components/topnav/topnav.component';
 import { MapComponent } from '../components/maps/maps.component';
+import { CardComponent } from '../components/card/card.component';
+
 
 
 
@@ -15,6 +17,7 @@ import { MapComponent } from '../components/maps/maps.component';
     LayoutComponent,
     TopnavComponent,
     MapComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

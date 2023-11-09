@@ -1,3 +1,14 @@
-<app-screen></app-screen>
 <app-topnav></app-topnav>
+<body>
+<app-screen></app-screen>
+<div class="card">
+    <app-card-small class="main" 
+    *ngFor="let item of cardData"
+    title="{{item.title}}"
+    value="{{item.value}}"
+    content="{{item.content}}"
+    link="{{item.link}}"
+    ></app-card-small>
+  </div>
 <app-maps></app-maps>
+</body>

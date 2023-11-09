@@ -10,10 +10,12 @@ import { LayoutModule } from './layout/layout.module';
 import { ScreenComponent } from './components/screen/screen.component';
 import { TopnavComponent } from './components/topnav/topnav.component';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
 
 
 

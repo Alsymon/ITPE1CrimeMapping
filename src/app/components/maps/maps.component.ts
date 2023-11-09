@@ -13,8 +13,8 @@ export class MapComponent implements OnInit {
     const map = new maplibregl.Map({
       container: 'map',
       style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=5b3XyvkSJl8L242vRkii',
-      center: [122.931047, 11.591964], // Centered around the Philippines
-      zoom: 5,
+      center: [120.9675, 15.5017], // Centered around the Philippines
+      zoom: 12,
     });
 
   }
