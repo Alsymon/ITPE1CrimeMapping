@@ -1,4 +1,8 @@
-<app-topnav></app-topnav>
+<app-topnav
+*ngFor="let item of guest"
+account="{{item.account}}"
+link="{{item.link}}"
+></app-topnav>
 <body>
 <app-screen></app-screen>
 <div class="card">

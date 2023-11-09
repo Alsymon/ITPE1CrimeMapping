@@ -1,0 +1,16 @@
+<app-topnav
+*ngFor="let item of admin"
+account="{{item.account}}"
+></app-topnav>
+<body>
+<div class="card">
+    <app-card-small class="main" 
+    *ngFor="let item of cardData"
+    title="{{item.title}}"
+    value="{{item.value}}"
+    content="{{item.content}}"
+    link="{{item.link}}"
+    ></app-card-small>
+  </div>
+<app-maps></app-maps>
+</body>

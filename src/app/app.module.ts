@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { LayoutComponent } from './layout/layout.component';
 import { LoginModule } from './login/login.module';
-import { LayoutModule } from './layout/layout.module';
-import { ScreenComponent } from './components/screen/screen.component';
-import { TopnavComponent } from './components/topnav/topnav.component';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
-import { CardComponent } from './components/card/card.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AdminComponent } from './admin/admin.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +20,9 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     AppRoutingModule,
     LoginModule,
-    LayoutModule,
-    NgxMapLibreGLModule
+    NgxMapLibreGLModule,
+    DashboardModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from './layout.component';
+import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    component: AdminComponent
   }
 ];
 
 @NgModule({
   declarations: [],
-  imports: [
-    RouterModule.forChild(routes)
-  ],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LayoutRoutingModule { }
+export class AdminRoutingModule { }
