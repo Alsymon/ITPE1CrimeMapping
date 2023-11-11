@@ -8,19 +8,13 @@ $color3: #00c3ff;
   box-sizing: border-box;
   background-color: $color3;
 }
-body {
-     
-  padding: 20px; 
-
+body {   
+  padding: 20px;
 }
 h1{ 
   color: #fff;
 }
 
-.card{
-  display: flex;
-  gap: 20px;
-}
 
 
 app-card-small.main {
