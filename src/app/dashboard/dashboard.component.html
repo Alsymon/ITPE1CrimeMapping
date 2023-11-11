@@ -1,7 +1,6 @@
 <app-topnav
 *ngFor="let item of guest"
 account="{{item.account}}"
-link="{{item.link}}"
 ></app-topnav>
 <body>
 <app-screen></app-screen>
@@ -15,5 +14,7 @@ link="{{item.link}}"
     link="{{item.link}}"
     ></app-card-small>
   </div>
-  <app-maps></app-maps>
+  <app-sidenav
+  *ngFor="let item of sidenav"
+guest="{{item.guest}}"></app-sidenav>
 </body>

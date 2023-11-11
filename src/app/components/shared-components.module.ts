@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { MapComponent } from './maps/maps.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 
@@ -11,6 +12,7 @@ import { MapComponent } from './maps/maps.component';
     CardComponent,
     TopnavComponent,
     MapComponent,
+    SidenavComponent,
   ],
   imports: [
     CommonModule
@@ -19,6 +21,7 @@ import { MapComponent } from './maps/maps.component';
     CardComponent,
     TopnavComponent,
     MapComponent,
+    SidenavComponent
   ]
 })
 export class SharedComponentsModule { }

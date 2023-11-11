@@ -12,5 +12,7 @@ account="{{item.account}}"
     link="{{item.link}}"
     ></app-card-small>
   </div>
-<app-maps></app-maps>
+<app-sidenav
+*ngFor="let item of sidenav_admin"
+admin="{{item.admin}}"></app-sidenav>
 </body>

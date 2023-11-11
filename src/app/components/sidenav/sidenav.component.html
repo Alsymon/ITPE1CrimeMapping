@@ -1,0 +1,10 @@
+<div class="sidenav">
+    <div class="sidenav-logo">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+
+    <div class="bottom-items">
+           <a *ngIf="guest" [href]="guest">Login</a>
+           <a *ngIf="admin" [href]="admin">Logout</a>
+    </div>
+</div>

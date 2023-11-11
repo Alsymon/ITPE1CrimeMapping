@@ -14,6 +14,14 @@ const routes: Routes = [
     path: "admin",
     loadChildren: ()=> import('./admin/admin.module').then(mod=>mod.AdminModule),
   },
+  {
+    path: "list",
+    loadChildren: ()=> import('./crimelist/crimelist.module').then(mod=>mod.CrimelistModule),
+  },
+  {
+    path: "analystics",
+    loadChildren: ()=> import('./crimeanalyst/crimeanalyst.module').then(mod=>mod.CrimeanalystModule),
+  },
 ];
 
 @NgModule({

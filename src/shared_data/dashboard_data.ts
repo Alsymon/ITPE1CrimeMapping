@@ -3,13 +3,13 @@ export const guest_card_data = [
         title: "Crime List",
         value: 82, 
         content: "Total number of Crimes",
-        link: "http://localhost:4200/manage/crimes"
+        link: "http://localhost:4200/list"
     },
     {
         title: "Crimes Analystics",
         value: "",
         content: "The analystics of the Crime Lists ",
-        link: "http://localhost:4200/manage/analystics"
+        link: "http://localhost:4200/analystics"
     },
 ]
 export const admin_card_data = [
@@ -17,13 +17,13 @@ export const admin_card_data = [
         title: "Crime List",
         value: 82, 
         content: "Total number of Crimes",
-        link: "http://localhost:4200/manage/crimes"
+        link: "http://localhost:4200/list"
     },
     {
         title: "Crimes Analystics",
         value: "",
         content: "The analystics of the Crime Lists ",
-        link: "http://localhost:4200/manage/analystics"
+        link: "http://localhost:4200/analystics"
     },
     {
         title: "User-Management",
@@ -35,12 +35,23 @@ export const admin_card_data = [
 export const topnav_data = [
     {
         account: "Guest",
-        link: "http://localhost:4200/"
     }
 ]
 
 export const admin_topnav_data = [
     {
         account: "Admin"
+    }
+]
+
+export const guest_sidenav_data = [
+    {
+        guest: "http://localhost:4200/"
+    }
+]
+
+export const admin_sidenav_data = [
+    {
+        admin: "http://localhost:4200/"
     }
 ]
