@@ -1,2 +1,13 @@
-<app-topnav></app-topnav>
-<app-maps></app-maps>
+
+<body>
+    <app-topnav
+*ngFor="let item of guest"
+account="{{item.account}}"
+></app-topnav>
+
+<app-maps class="map"></app-maps>
+<app-sidenav
+*ngFor="let item of sidenav"
+guest="{{item.guest}}"></app-sidenav>
+</body>
+

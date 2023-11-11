@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~maplibre-gl/dist/maplibre-gl.css';
+$color: #0088e2;
+$color2: #002ca5;
+$color3: #00c3ff;
 
 body {
     margin: 0;
@@ -8,9 +11,11 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $color3;
   }
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
