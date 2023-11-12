@@ -2,25 +2,26 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
   {
     path: "",
     loadChildren: ()=> import('./login/login.module').then(mod=>mod.LoginModule),
   },
   {
-    path: "dashboard",
-    loadChildren: ()=> import('./dashboard/dashboard.module').then(mod=>mod.DashboardModule),
+    path: "layout",
+    loadChildren: ()=> import('./layout/layout.module').then(mod=>mod.LayoutModule),
   },
   {
-    path: "admin",
-    loadChildren: ()=> import('./admin/admin.module').then(mod=>mod.AdminModule),
+    path: "admin-dashboard",
+    loadChildren: ()=> import('./dashboard-admin/dashboard-admin.module').then(mod=>mod.DashboardAdminModule),
   },
   {
-    path: "list",
-    loadChildren: ()=> import('./crimelist/crimelist.module').then(mod=>mod.CrimelistModule),
+    path: "admin-analytics",
+    loadChildren: ()=> import('./analytics-admin/analytics-admin.module').then(mod=>mod.AnalyticsAdminModule),
   },
   {
-    path: "analystics",
-    loadChildren: ()=> import('./crimeanalyst/crimeanalyst.module').then(mod=>mod.CrimeanalystModule),
+    path: "admin-list",
+    loadChildren: ()=> import('./list-admin/list-admin.module').then(mod=>mod.ListAdminModule),
   },
 ];
 
