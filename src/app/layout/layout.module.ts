@@ -7,12 +7,13 @@ import { ScreenComponent } from '../components/screen/screen.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListComponent } from './list/list.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 
 
 @NgModule({
   declarations: [LayoutComponent,
-ScreenComponent
+ScreenComponent,
 ],
   imports: [
     CommonModule,

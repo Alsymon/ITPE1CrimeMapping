@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { guest_card_data, topnav_data, guest_sidenav_data } from 'src/shared_data/dashboard_data';
+import { admin_card_data, admin_sidenav_data, admin_topnav_data } from 'src/shared_data/dashboard_data';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +7,9 @@ import { guest_card_data, topnav_data, guest_sidenav_data } from 'src/shared_dat
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  cardData = guest_card_data;
-  guest = topnav_data;
-  sidenav = guest_sidenav_data;
+  cardData = admin_card_data;
+  admin = admin_topnav_data;
+  admin_sidenav = admin_sidenav_data;
 
   ngOnInit(): void {
     //console.log ("This is card data", this.cardData)

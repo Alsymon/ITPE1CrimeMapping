@@ -8,6 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SidenavComponent implements OnInit {
   @Input()guest: string = '';
   @Input()admin: string = '';
+  @Input()list: string = '';
+  @Input()analytics: string = '';
+  @Input()usermanagement: string = '';
+
 
   constructor() { }
 

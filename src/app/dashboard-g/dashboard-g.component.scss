@@ -9,7 +9,7 @@ $color3: #00c3ff;
   background-color: $color3;
 }
 body {
-    padding-top: 10px;
+    padding-top: 30px;
     padding-left: 270px;
 }
 h1{ 
@@ -17,7 +17,7 @@ h1{
 }
 
 
-app-card-small.main {
+app-card-small.main-body {
   &:nth-child(odd) {
      
       display: flex;
@@ -35,7 +35,7 @@ app-card-small.main {
       justify-content: center;
       text-decoration: none;
       color: #fff; 
-      font-size: 16px;  
+      font-size: 12px;  
       font-weight: bold;  
       text-align: center;
   }
@@ -57,7 +57,7 @@ app-card-small.main {
     justify-content: center;
     text-decoration: none;
     color: #fff; 
-    font-size: 16px;  
+    font-size: 12px;  
     font-weight: bold;  
     text-align: center;  
   }

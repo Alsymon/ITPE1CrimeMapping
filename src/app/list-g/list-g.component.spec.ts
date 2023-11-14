@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListAdminComponent } from './list-admin.component';
+import { ListGComponent } from './list-g.component';
 
-describe('ListAdminComponent', () => {
-  let component: ListAdminComponent;
-  let fixture: ComponentFixture<ListAdminComponent>;
+describe('ListGComponent', () => {
+  let component: ListGComponent;
+  let fixture: ComponentFixture<ListGComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListAdminComponent]
+      declarations: [ListGComponent]
     });
-    fixture = TestBed.createComponent(ListAdminComponent);
+    fixture = TestBed.createComponent(ListGComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,3 +1,7 @@
+<app-topnav
+*ngFor="let item of guest"
+account="{{item.account}}"
+></app-topnav>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -75,8 +79,10 @@
             </div>
         </div>        
     </div>
-    
-
-    </body>
-
     <app-maps></app-maps>
+    <app-sidenav
+    *ngFor="let item of sidenav"
+    guest="{{item.guest}}"
+    list="{{item.list}}"
+analytics="{{item.analytics}}"></app-sidenav>
+    </body>
