@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
-
 import { LayoutComponent } from './layout/layout.component';
 import { LayoutModule } from './layout/layout.module';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
@@ -13,9 +12,12 @@ import { AnalyticsAdminComponent } from './analytics-admin/analytics-admin.compo
 import { AnalyticsAdminModule } from './analytics-admin/analytics-admin.module';
 import { DashboardAdminModule } from './dashboard-admin/dashboard-admin.module';
 import { ListAdminModule } from './list-admin/list-admin.module';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { UserManagementModule } from './user-management/user-management.module';
 @NgModule({
   declarations: [
     AppComponent,
+
 
 
 
@@ -29,7 +31,8 @@ import { ListAdminModule } from './list-admin/list-admin.module';
     LayoutModule,
     AnalyticsAdminModule,
     DashboardAdminModule,
-    ListAdminModule
+    ListAdminModule,
+    UserManagementModule
   ],  
   providers: [],
   bootstrap: [AppComponent]
