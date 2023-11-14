@@ -23,6 +23,10 @@ const routes : Routes =[
           path: "analytics",
            loadChildren:()=>import('./analytics/analytics.module').then(mod=>mod.AnalyticsModule),
         },
+        {
+          path: "user-management",
+           loadChildren:()=>import('./user-management/user-management.module').then(mod=>mod.UserManagementModule),
+        },
   ]
  }
 ];

@@ -1,11 +1,14 @@
 <app-topnav
-*ngFor="let item of guest"
+*ngFor="let item of admin"
 account="{{item.account}}"
 ></app-topnav>
 <body>
   <app-screen></app-screen>
   <app-sidenav
-  *ngFor="let item of sidenav"
-guest="{{item.guest}}"></app-sidenav>
-
+  *ngFor="let item of admin_sidenav"
+list="{{item.list}}"
+analytics="{{item.analytics}}"
+usermanagement="{{item.usermanagement}}"
+admin="{{item.admin}}"
+></app-sidenav>
 </body>

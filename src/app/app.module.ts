@@ -6,17 +6,17 @@ import { LoginModule } from './login/login.module';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 import { LayoutComponent } from './layout/layout.component';
 import { LayoutModule } from './layout/layout.module';
-import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
-import { ListAdminComponent } from './list-admin/list-admin.component';
-import { AnalyticsAdminComponent } from './analytics-admin/analytics-admin.component';
-import { AnalyticsAdminModule } from './analytics-admin/analytics-admin.module';
-import { DashboardAdminModule } from './dashboard-admin/dashboard-admin.module';
-import { ListAdminModule } from './list-admin/list-admin.module';
-import { UserManagementComponent } from './user-management/user-management.component';
-import { UserManagementModule } from './user-management/user-management.module';
+
+import { AnalyticsGComponent } from './analytics-g/analytics-g.component';
+import { DashboardGComponent } from './dashboard-g/dashboard-g.component';
+import { AnalyticsGModule } from './analytics-g/analytics-g.module';
+import { DashboardGModule } from './dashboard-g/dashboard-g.module';
+import { ListGModule } from './list-g/list-g.module';
 @NgModule({
   declarations: [
     AppComponent,
+
+
 
 
 
@@ -29,10 +29,9 @@ import { UserManagementModule } from './user-management/user-management.module';
     LoginModule,
     NgxMapLibreGLModule,
     LayoutModule,
-    AnalyticsAdminModule,
-    DashboardAdminModule,
-    ListAdminModule,
-    UserManagementModule
+    AnalyticsGModule,
+    ListGModule,
+    DashboardGModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

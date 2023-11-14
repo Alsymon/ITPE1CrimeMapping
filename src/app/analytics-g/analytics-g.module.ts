@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListAdminRoutingModule } from './list-admin-routing.module';
 import { SharedComponentsModule } from '../components/shared-components.module';
-import { ListAdminComponent } from './list-admin.component';
+import { AnalyticsGComponent } from './analytics-g.component';
+import { AnalyticsGRoutingModule } from './analytics-g-routing.module';
 
 
 
 @NgModule({
-  declarations: [ListAdminComponent],
+  declarations: [AnalyticsGComponent],
   imports: [
     CommonModule,
-    ListAdminRoutingModule,
+    AnalyticsGRoutingModule,
     SharedComponentsModule
   ]
 })
-export class ListAdminModule { }
+export class AnalyticsGModule { }

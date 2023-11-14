@@ -5,6 +5,7 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { MapComponent } from './maps/maps.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ScreenComponent } from './screen/screen.component';
+import { ChartComponent } from './chart/chart.component';
 
 
 
@@ -16,6 +17,7 @@ import { ScreenComponent } from './screen/screen.component';
     MapComponent,
     SidenavComponent,
     CardComponent,
+    ChartComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +28,7 @@ import { ScreenComponent } from './screen/screen.component';
     TopnavComponent,
     MapComponent,
     SidenavComponent,
+    ChartComponent
   ]
 })
 export class SharedComponentsModule { }

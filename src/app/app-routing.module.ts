@@ -12,20 +12,16 @@ const routes: Routes = [
     loadChildren: ()=> import('./layout/layout.module').then(mod=>mod.LayoutModule),
   },
   {
-    path: "admin-dashboard",
-    loadChildren: ()=> import('./dashboard-admin/dashboard-admin.module').then(mod=>mod.DashboardAdminModule),
+    path: "guest/dashboard",
+    loadChildren: ()=> import('./dashboard-g/dashboard-g.module').then(mod=>mod.DashboardGModule),
   },
   {
-    path: "admin-analytics",
-    loadChildren: ()=> import('./analytics-admin/analytics-admin.module').then(mod=>mod.AnalyticsAdminModule),
+    path: "guest/analytics",
+    loadChildren: ()=> import('./analytics-g/analytics-g.module').then(mod=>mod.AnalyticsGModule),
   },
   {
-    path: "admin-list",
-    loadChildren: ()=> import('./list-admin/list-admin.module').then(mod=>mod.ListAdminModule),
-  },
-  {
-    path: "user-management",
-    loadChildren: ()=> import('./user-management/user-management.module').then(mod=>mod.UserManagementModule),
+    path: "guest/list",
+    loadChildren: ()=> import('./list-g/list-g.module').then(mod=>mod.ListGModule),
   },
 ];
 
