@@ -1,40 +1,92 @@
 <body>
-      <h1>User Management</h1>
-  
-  <h2>Add User</h2>
-  <div>
-    <form (submit)="addUser()">
-        <input type="text" [(ngModel)]="username" name="username" placeholder="Username"  required />
-        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required/>
-        <input type="passwordInputType" [(ngModel)]="password" name="password" placeholder="Password" required />
-        <button type="submit">Add User</button>
+  <div class="card">
+    <div class="card-header">
+      <h2>Add Crime</h2>
+    </div>
+    <div class="card-body">
+      <form (submit)="addCrime()">
+        <div class="form-group">
+          <label for="crime">Crime:</label>
+          <input type="text" [(ngModel)]="crime" name="Crime" id="crime" class="form-control" placeholder="Crime" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <input type="text" [(ngModel)]="location" name="Location" id="location" class="form-control" placeholder="Location" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" [(ngModel)]="date" name="Date" id="date" class="form-control" placeholder="Date" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="resolution">Resolution:</label>
+          <select id="resolution" [(ngModel)]="resolution" name="Resolution" class="form-control" required>
+            <option *ngFor="let res of resolutions" [value]="res">{{ res }}</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Add Crime</button>
       </form>
+    </div>    
   </div>
 
-  
-  
-  
-  <h2>Crime List</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users; let i = index">
-        <td>{{ user.username }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.passwordHidden ? '********' : user.password }}</td>
-        <td>
-          <button (click)="togglePasswordVisibility(i)">Toggle Password</button>
-          <button (click)="deleteUser(i)">Delete</button>
-      </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  </body>
+  <div class="card">
+    <div class="card-header">
+      <h2>CrimeList</h2>
+    </div>
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th>Crime</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Resolution</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{ user.crime }}</td>
+            <td>{{ user.location }}</td>
+            <td>{{ user.date }}</td>
+            <td>{{ user.resolution }}</td>
+
+            <td>
+              <button class="btn btn-primary"  style="margin-right: 10px;" (click)="editCrime(i)" *ngIf="editingIndex !== i">Edit</button>
+              <button  class="btn btn-primary"  style="margin-right: 10px;" (click)="deleteCrime(i)">Delete</button>
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="editingIndex !== null" class="edit-form">
+        <div>
+          <label>Crime: </label>
+          <input type="text" [(ngModel)]="users[editingIndex].crime" />
+        </div>
+        <div>
+          <label>Location: </label>
+          <input type="text" [(ngModel)]="users[editingIndex].location" />
+        </div>
+        <div>
+          <label>Date: </label>
+          <input type="date" [(ngModel)]="users[editingIndex].date" />
+        </div>
+        <div>
+          <label>Resolution: </label>
+          <select [(ngModel)]="users[editingIndex].resolution">
+            <option *ngFor="let res of resolutions" [value]="res">{{ res }}</option>
+          </select>
+        </div>
+        <button (click)="saveEdit(editingIndex)">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS and Popper.js scripts (required for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

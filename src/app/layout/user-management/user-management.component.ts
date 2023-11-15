@@ -10,23 +10,35 @@ export class UserManagementComponent implements OnInit {
   cardData = admin_card_data;
   admin = admin_topnav_data;
   admin_sidenav = admin_sidenav_data;
-  buttonText: string = "I'm inside typescript";
+
+  editingIndex: number | null = null;
+  editedUser: { crime: string; location: string; date: string; resolution: string } = { crime: '', location: '', date: '', resolution: '' };
+  
+  
+
   username: string = '';
-  email: string = '';
   password: string = '';
   passwordInputType = 'password';
-  users: { username: string; email: string; password: string, passwordHidden: boolean }[] = [];
+  users: { username: string; password: string, passwordHidden: boolean }[] = [];
 
   addUser() {
-    if (this.username && this.email && this.password) {
-      this.users.push({ username: this.username, email: this.email, password: this.password,passwordHidden: true});
+    if (this.username && this.password) {
+      this.users.push({ username: this.username, password: this.password,passwordHidden: true});
       this.username = '';
-      this.email = '';
       this.password = '';
       this.passwordInputType = 'password';
 
       localStorage.setItem('userManagementData', JSON.stringify(this.users));
     }
+  }
+
+  editCrime(index: number) {
+    this.editingIndex = index;
+  }
+
+  saveEdit(index: number) {
+    // Save your changes here
+    this.editingIndex = null; // Reset editing index after saving
   }
 
   deleteUser(index: number) {

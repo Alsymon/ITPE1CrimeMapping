@@ -67,3 +67,12 @@ export const admin_sidenav_data = [
         admin: "http://localhost:4200/"
     }
 ]
+
+export const table_data = [
+    {
+        crime: "Theft",
+        location: "Gapan",
+        date: "21-08-2023",
+        resolution: "Ongoing"
+    }
+]
