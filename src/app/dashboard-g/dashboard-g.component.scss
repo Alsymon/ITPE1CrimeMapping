@@ -1,12 +1,13 @@
-$color: #0088e2;
-$color2: #3700ff;
-$color3: #00c3ff;
+$color: #2F2963;
+$color2: #454372;
+$color3: #f0f1f3;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: $color3;
+  height: 100%;
 }
 body {
     padding-top: 30px;

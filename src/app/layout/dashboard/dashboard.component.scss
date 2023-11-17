@@ -1,6 +1,6 @@
-$color: #0088e2;
-$color2: #3700ff;
-$color3: #00c3ff;
+$color: #2F2963;
+$color2: #454372;
+$color3: #f0f1f3;
 
 * {
   margin: 0;
@@ -43,23 +43,23 @@ app-card-small.main-body {
   &:nth-child(even) {
      
     display: flex;
-    max-height: 270px;
-    max-width: 270px;
-    background-color: $color;
-    margin: 10px;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    justify-content: center;
-    text-decoration: none;
-    color: #fff; 
-    font-size: 12px;  
-    font-weight: bold;  
-    text-align: center;  
+      max-height: 270px;
+      max-width: 270px;
+      background-color: $color;
+      margin: 10px;
+      padding: 0;
+      box-sizing: border-box;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff; 
+      font-size: 12px;  
+      font-weight: bold;  
+      text-align: center;
   }
 
   &:hover {
