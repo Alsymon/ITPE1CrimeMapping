@@ -1,11 +1,17 @@
 <div class="sidenav">
+    <div class="box">
     <div class="sidenav-logo">
         <img src="assets/logo.png" alt="Logo">
     </div>
+    </div>
     <div class="top-items">
-    <a *ngIf="list" [href]="list">List</a>
-    <a *ngIf="analytics" [href]="analytics">Analytics</a>
-    <a *ngIf="usermanagement" [href]="usermanagement">User-Management</a>
+        <div>
+            <i class="fa-solid fa-list" style="color: #000000;"></i>
+    <a *ngIf="list" [href]="list">List</a></div>
+    <div>
+    <a *ngIf="analytics" [href]="analytics">Analytics</a></div>
+    <div>
+    <a *ngIf="usermanagement" [href]="usermanagement">User-Management</a></div>
     </div>
     <div class="bottom-items">
            <a *ngIf="guest" [href]="guest">Login</a>

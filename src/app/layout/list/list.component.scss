@@ -1,6 +1,6 @@
 $color: #754668;
     $color2: #ffbf00;
-    $color3: #4DAA57;
+    $color3: #F8F0FB;
     body {
       font-family: Arial, sans-serif;
       background-color: $color3;
@@ -23,7 +23,7 @@ $color: #754668;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .card-header {
-      background-color: #4CAF50;
+      background-color: #3E92CC;
       color: white;
       border-radius: 10px 10px 0 0;
     }
@@ -45,7 +45,7 @@ $color: #754668;
       background-color: #f2f2f2;
     }
     th {
-      background-color: #4CAF50;
+      background-color:#3E92CC;
       color: white; 
     }
     .edit-form {
