@@ -6,10 +6,10 @@ account="{{item.account}}"
 
 <div class="card">
   <div class="card-header">
-    <h2>CrimeList</h2>
+    <h2>Crime List</h2>
   </div>
   <div class="card-body">
-    <table>
+    <table class="table table-striped table-hover custom-table">
       <thead>
         <tr>
           <th>Crime</th>
@@ -30,10 +30,12 @@ account="{{item.account}}"
 </table>
 </div>
 </div>
-    <app-sidenav
-    *ngFor="let item of sidenav"
-    guest="{{item.guest}}"
-    list="{{item.list}}"
-analytics="{{item.analytics}}"></app-sidenav>
+<app-sidenav
+*ngFor="let item of sidenav"
+dashboardG="{{item.dashboardG}}"
+guest="{{item.guest}}"
+list="{{item.list}}"
+analytics="{{item.analytics}}"
+></app-sidenav>
 </body>
 

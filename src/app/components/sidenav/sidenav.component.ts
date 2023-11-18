@@ -11,7 +11,8 @@ export class SidenavComponent implements OnInit {
   @Input()list: string = '';
   @Input()analytics: string = '';
   @Input()usermanagement: string = '';
-
+  @Input()dashboard: string = '';
+  @Input()dashboardG: string = '';
 
   constructor() { }
 

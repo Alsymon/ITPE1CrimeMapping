@@ -15,9 +15,11 @@ export class ListComponent {
 
   editingIndex: number | null = null;
   editedUser: { crime: string; location: string; date: string; resolution: string } = { crime: '', location: '', date: '', resolution: '' };
-
+  showAddCrimeForm: boolean = false;
+  showAddCrimeButton: boolean = true;
   
-  crime: string = '';
+  crime: string = 'Theft';
+  crimes: string[] = ['Theft','Assault','Rape', 'Drug Abuse', 'Possession of Firearms'];
   location: string = '';
   date: string = '';
   resolution: string = 'Unresolved';
@@ -31,16 +33,26 @@ export class ListComponent {
          date: this.date, 
           resolution: this.resolution
         });
+        
+
       this.crime = '';
       this.location = '';
       this.date = ''; 
       this.resolution = 'Unresolved';
     
       localStorage.setItem('userManagementData', JSON.stringify(this.users));
+
     }
   }
 
-
+  toggleAddCrimeForm() {
+    this.showAddCrimeForm = !this.showAddCrimeForm;
+    this.showAddCrimeButton = !this.showAddCrimeButton;
+  }
+  exitForm() {
+    this.showAddCrimeForm = false;
+    this.showAddCrimeButton = true;
+  }
 
   editCrime(index: number) {
     this.editingIndex = index;

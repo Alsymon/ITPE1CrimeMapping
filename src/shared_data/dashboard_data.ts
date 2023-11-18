@@ -46,6 +46,9 @@ export const admin_topnav_data = [
 
 export const guest_sidenav_data = [
     {
+
+        dashboardG: "http://localhost:4200/guest/dashboard",
+
         list: "http://localhost:4200/guest/list",
     
 
@@ -59,6 +62,8 @@ export const guest_sidenav_data = [
 
 export const admin_sidenav_data = [
     {
+
+        dashboard: "http://localhost:4200/dashboard",
         list: "http://localhost:4200/list",
 
         analytics: "http://localhost:4200/analytics",

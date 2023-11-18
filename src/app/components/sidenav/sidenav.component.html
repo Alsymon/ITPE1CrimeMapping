@@ -6,7 +6,13 @@
     </div>
     <div class="top-items">
         <div>
-            <i class="fa-solid fa-list" style="color: #000000;"></i>
+            <a *ngIf="dashboard" [href]="dashboard">Dashboard</a>
+        </div>
+        <div>
+            <a *ngIf="dashboardG" [href]="dashboardG">Dashboard</a>
+        </div>
+        <div>
+
     <a *ngIf="list" [href]="list">List</a></div>
     <div>
     <a *ngIf="analytics" [href]="analytics">Analytics</a></div>
