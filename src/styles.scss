@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~maplibre-gl/dist/maplibre-gl.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 $color: #0088e2;
 $color2: #002ca5;
 $color3:#f0f1f3;
@@ -19,3 +21,6 @@ body {
       monospace;
   }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
