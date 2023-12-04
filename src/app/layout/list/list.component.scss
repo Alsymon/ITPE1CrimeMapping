@@ -1,11 +1,11 @@
-$color: #754668;
+$color:#152939;
     $color2: #ffbf00;
     $color3: #F8F0FB;
     body {
       font-family: Arial, sans-serif;
       background-color: $color3;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       border-radius: 5px;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
       text-align: center;
@@ -16,8 +16,9 @@ $color: #754668;
     /* Add Bootstrap card styles */
     .card {
       width: 100%;
-      max-width: 600px; /* Adjust the maximum width as needed */
+      max-width: 1100px; /* Adjust the maximum width as needed */
       margin-top: 20px;
+      margin-left: 200px;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,7 +30,7 @@ $color: #754668;
       border-bottom: none;
     }
     .card-header {
-      background-color: #3E92CC;
+      background-color: $color;
       color: white;
       border-radius: 10px 10px 0 0;
     }
@@ -51,7 +52,7 @@ $color: #754668;
       background-color: #f2f2f2;
     }
     th {
-      background-color:#3E92CC;
+      background-color:$color;
       color: white; 
     }
     .btn.btn-secondary{
@@ -91,5 +92,18 @@ $color: #754668;
           border-radius: 4px;
           cursor: pointer;
         }
+      }
+    }
+    #crimeadd {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    
+      &:hover {
+        background-color: #0056b3;
       }
     }

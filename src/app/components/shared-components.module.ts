@@ -18,6 +18,7 @@ import { ChartComponent } from './chart/chart.component';
     SidenavComponent,
     CardComponent,
     ChartComponent,
+
   ],
   imports: [
     CommonModule,
@@ -28,7 +29,8 @@ import { ChartComponent } from './chart/chart.component';
     TopnavComponent,
     MapComponent,
     SidenavComponent,
-    ChartComponent
+    ChartComponent,
+
   ]
 })
 export class SharedComponentsModule { }

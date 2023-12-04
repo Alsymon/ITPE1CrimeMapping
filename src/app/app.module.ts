@@ -12,6 +12,7 @@ import { DashboardGComponent } from './dashboard-g/dashboard-g.component';
 import { AnalyticsGModule } from './analytics-g/analytics-g.module';
 import { DashboardGModule } from './dashboard-g/dashboard-g.module';
 import { ListGModule } from './list-g/list-g.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { ListGModule } from './list-g/list-g.module';
     LayoutModule,
     AnalyticsGModule,
     ListGModule,
-    DashboardGModule
+    DashboardGModule,
+    BrowserAnimationsModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

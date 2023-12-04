@@ -1,12 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import {  MatDialog,} from '@angular/material/dialog';
+
 import { admin_card_data, admin_topnav_data, admin_sidenav_data } from 'src/shared_data/dashboard_data';
+import { UserModalComponent } from './user-modal/user-modal.component';
 
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
   styleUrls: ['./user-management.component.scss']
 })
-export class UserManagementComponent implements OnInit {
+export class UserManagementComponent{
+
+  constructor(private dialogRef : MatDialog){}
+
+  openDialog() {
+    this.dialogRef.open(UserModalComponent)
+  }
+  
+  
+
   cardData = admin_card_data;
   admin = admin_topnav_data;
   admin_sidenav = admin_sidenav_data;
@@ -59,4 +71,4 @@ export class UserManagementComponent implements OnInit {
       this.users = JSON.parse(storedData);
     }
   }
-}
+ }
