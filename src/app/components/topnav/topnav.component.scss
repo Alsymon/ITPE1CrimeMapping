@@ -34,6 +34,7 @@ $color:#152939;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    
 
     transition: text-shadow 0.3s ease;
     &:hover{
@@ -45,4 +46,40 @@ $color:#152939;
     color: #fff;
     text-align: right;
     margin-right: 20px;
+}
+
+.toggle {
+    display: none;
+}
+.card-text {
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.toggle:checked + .card-text + .dropdown-content,
+.card-text:focus + .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgb(255, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
 }

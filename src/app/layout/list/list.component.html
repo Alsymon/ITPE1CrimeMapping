@@ -23,14 +23,18 @@
         </div>
         
         <div class="form-group">
-          <label for="resolution">Resolution:</label>
-          <select id="resolution" [(ngModel)]="resolution" name="Resolution" class="form-control" required>
+          <label for="status">Status:</label>
+          <select id="status" [(ngModel)]="status" name="status" class="form-control" required>
             <option *ngFor="let res of resolutions" [value]="res">{{ res }}</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="report">Reported By:</label>
+          <input type="text" [(ngModel)]="report" name="report" id="report" class="form-control" placeholder="Report" required />
+        </div>
         <br>   
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Save Crime</button>
+          <button type="submit" class="btn btn-primary">Save</button>
           <button type="button" class="btn btn-secondary" (click)="exitForm()">Exit</button>
         </div> 
       </form>
@@ -42,7 +46,7 @@
  
   <div class="card">
     <div class="card-header">
-      <h2>CrimeList</h2>
+      <h2>Cabanatuan Crime List</h2>
     </div>
     <div class="card-body">
       <table class="table table-striped table-hover custom-table">
@@ -51,7 +55,8 @@
             <th>Crime</th>
             <th>Location</th>
             <th>Date</th>
-            <th>Resolution</th>
+            <th>Status</th>
+            <th>Reported By</th>
             <th></th>
           </tr>
         </thead>
@@ -60,7 +65,8 @@
             <td>{{ user.crime }}</td>
             <td>{{ user.location }}</td>
             <td>{{ user.date }}</td>
-            <td>{{ user.resolution }}</td>
+            <td>{{ user.status }}</td>
+            <td>{{ user.report}}</td>
 
             <td>
               <button class="btn btn-primary"  style="margin-right: 10px;" (click)="editCrime(i)" *ngIf="editingIndex !== i">Edit</button>
@@ -86,10 +92,14 @@
           <input type="date" [(ngModel)]="users[editingIndex].date" />
         </div>
         <div>
-          <label>Resolution: </label>
-          <select [(ngModel)]="users[editingIndex].resolution">
+          <label>Status: </label>
+          <select [(ngModel)]="users[editingIndex].status">
             <option *ngFor="let res of resolutions" [value]="res">{{ res }}</option>
           </select>
+        </div>
+        <div>
+          <label>Reported By: </label>
+          <input type="text" [(ngModel)]="users[editingIndex].report" />
         </div>
         <button (click)="saveEdit(editingIndex)">Save</button>
       </div>
