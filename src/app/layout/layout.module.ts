@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListComponent } from './list/list.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 

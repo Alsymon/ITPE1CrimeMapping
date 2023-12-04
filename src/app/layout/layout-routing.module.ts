@@ -27,6 +27,10 @@ const routes : Routes =[
           path: "user-management",
            loadChildren:()=>import('./user-management/user-management.module').then(mod=>mod.UserManagementModule),
         },
+        {
+          path: "profile",
+           loadChildren:()=>import('./profile/profile.module').then(mod=>mod.ProfileModule),
+        },
   ]
  }
 ];

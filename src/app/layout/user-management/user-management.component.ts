@@ -19,14 +19,17 @@ export class UserManagementComponent implements OnInit {
   username: string = '';
   password: string = '';
   passwordInputType = 'password';
-  users: { username: string; password: string, passwordHidden: boolean }[] = [];
+  position: string = 'Officer';
+  positions: string[] = ['Officer', 'Deputy Chief', 'Lieutenant', 'Chief'];
+  users: { username: string; password: string, passwordHidden: boolean, position:string }[] = [];
 
   addUser() {
     if (this.username && this.password) {
-      this.users.push({ username: this.username, password: this.password,passwordHidden: true});
+      this.users.push({ username: this.username, password: this.password,passwordHidden: true, position: this.position});
       this.username = '';
       this.password = '';
       this.passwordInputType = 'password';
+      this.position = '';
 
       localStorage.setItem('userManagementData', JSON.stringify(this.users));
     }

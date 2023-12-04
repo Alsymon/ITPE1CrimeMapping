@@ -22,23 +22,26 @@ export class ListComponent {
   crimes: string[] = ['Theft','Assault','Rape', 'Drug Abuse', 'Possession of Firearms'];
   location: string = '';
   date: string = '';
-  resolution: string = 'Unresolved';
+  status: string = 'Unresolved';
+  report: string = '';
   resolutions: string[] = ['Resolved', 'Unresolved', 'In Progress', 'Closed'];
-  users: { crime: string; location: string; date: string, resolution: string }[] = [];
+  users: { crime: string; location: string; date: string, status: string , report:string}[] = [];
 
   addCrime() {
-    if (this.crime && this.location && this.date && this.resolution) {
+    if (this.crime && this.location && this.date && this.status && this.report) {
       this.users.push({ crime: this.crime,
          location: this.location, 
          date: this.date, 
-          resolution: this.resolution
+          status: this.status,
+          report: this.report
         });
         
 
       this.crime = '';
       this.location = '';
       this.date = ''; 
-      this.resolution = 'Unresolved';
+      this.status= 'Unresolved';
+      this.report= '';
     
       localStorage.setItem('userManagementData', JSON.stringify(this.users));
 

@@ -25,12 +25,7 @@ export const admin_card_data = [
         content: "The analystics of the Crime Lists ",
         link: "http://localhost:4200/analytics"
     },
-    {
-        title: "User-Management",
-        value: " ",
-        content: "Manage the account of people that are registered. You can add and delete new Admin",
-        link: "http://localhost:4200/user-management"
-    }
+
 ]
 export const topnav_data = [
     {
