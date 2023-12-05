@@ -1,10 +1,10 @@
 #map{
-    width: 50%; 
+    width: 580px; 
     height: 500px;
     top: 15%;
-    left: 49%;
+    left: 50%;
     position: absolute;
     border-radius: 5px; /* Optional: Add border-radius for rounded corners */
     overflow: hidden; /* Optional: Hide overflow to prevent scrollbars if needed */
-
+    z-index: 0;
 }

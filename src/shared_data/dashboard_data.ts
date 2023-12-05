@@ -73,6 +73,7 @@ export const table_data = [
         crime: "Theft",
         location: "Gapan",
         date: "21-08-2023",
-        resolution: "Ongoing"
+        status: "Ongoing",
+        report: "Pedro"
     }
 ]
