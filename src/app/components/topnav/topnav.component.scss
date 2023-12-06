@@ -9,11 +9,10 @@ $color:#152939;
     margin: 0;
     padding: 0;
     height: 13%;
-    z-index: 0;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: $color;
-    overflow: hidden;
     position: absolute;
 }
 .topnav a {
@@ -47,7 +46,7 @@ $color:#152939;
 .topnav .topnav-right{
     color: #fff;
     text-align: right;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .toggle {
@@ -57,3 +56,45 @@ $color:#152939;
     cursor: pointer;
 }
 
+.menu-container {
+    text-align: right;
+    position: relative;
+    z-index: 50;
+  }
+  
+  .menu-toggler {
+    cursor: pointer;
+  }
+  
+  .account-wrapper {
+    display: inline-block;
+    position: relative; /* Add position:relative */
+    z-index: 2; /* Increase the z-index */
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 80px;
+    background: #333;
+    color: #fff;
+    margin: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 50;
+    text-align: center;
+  }
+  
+  .menu-item {
+    cursor: pointer;
+    padding: 5px 0;
+    z-index: 50;
+  }
+  
+  .menu-item:hover {
+    text-decoration: underline;
+    z-index: 50;
+  }
+
+  

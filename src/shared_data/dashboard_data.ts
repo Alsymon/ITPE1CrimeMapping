@@ -30,12 +30,15 @@ export const admin_card_data = [
 export const topnav_data = [
     {
         account: "Guest",
+        guest: "Logout"
     }
 ]
 
 export const admin_topnav_data = [
     {
-        account: "Admin"
+        account: "Admin",
+        profile: "Profile",
+        admin: "Logout"
     }
 ]
 
@@ -77,3 +80,4 @@ export const table_data = [
         report: "Pedro"
     }
 ]
+
