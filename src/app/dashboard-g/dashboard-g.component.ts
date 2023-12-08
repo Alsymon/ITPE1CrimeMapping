@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { guest_card_data, topnav_data, guest_sidenav_data } from 'src/shared_data/dashboard_data';
+import { guest_card_data, topnav_data, guest_sidenav_data, } from 'src/shared_data/dashboard_data';
 
 @Component({
   selector: 'app-dashboard-g',

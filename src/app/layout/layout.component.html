@@ -1,8 +1,11 @@
 <app-topnav
 *ngFor="let item of admin"
 account="{{item.account}}"
+profile="{{item.profile}}"
+admin="{{item.admin}}"
 ></app-topnav>
 <body>
+
   <app-screen></app-screen>
   <app-sidenav
   *ngFor="let item of admin_sidenav"

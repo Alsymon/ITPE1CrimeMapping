@@ -15,9 +15,10 @@ export class ListGComponent implements OnInit {
   crime: string = '';
   location: string = '';
   date: string = '';
-  resolution: string = 'Unresolved';
+  status: string = 'Unresolved';
   resolutions: string[] = ['Resolved', 'Unresolved', 'In Progress', 'Closed'];
-  users: { crime: string; location: string; date: string, resolution: string }[] = [];
+  report: string = '';
+  users: { crime: string; location: string; date: string, status: string , report: string}[] = [];
 
 
   ngOnInit() {

@@ -16,10 +16,9 @@ h1{
   color: #fff;
 }
 
-
 app-card-small.main-body {
   &:nth-child(odd) {
-     
+
       display: flex;
       max-height: 270px;
       max-width: 270px;
@@ -38,6 +37,7 @@ app-card-small.main-body {
       font-size: 12px;  
       font-weight: bold;  
       text-align: center;
+      margin-top: 100px;
   }
 
   &:nth-child(even) {

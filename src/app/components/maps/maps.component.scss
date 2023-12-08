@@ -2,9 +2,9 @@
     width: 50%; 
     height: 500px;
     top: 15%;
-    left: 49%;
+    left: 48%;
     position: absolute;
     border-radius: 5px; /* Optional: Add border-radius for rounded corners */
     overflow: hidden; /* Optional: Hide overflow to prevent scrollbars if needed */
-
+    z-index: 0;
 }
