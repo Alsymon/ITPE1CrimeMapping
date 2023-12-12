@@ -1,0 +1,43 @@
+<app-topnav
+*ngFor="let item of guest"
+account="{{item.account}}"
+></app-topnav>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Crime List</h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped table-hover custom-table">
+      <thead>
+        <tr>
+          <th>Crime</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Reported By</th>
+        </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let items of tableData; let i = index">
+    <td>{{ items.crime }}</td>
+    <td>{{ items.location }}</td>
+    <td>{{ items.date }}</td>
+    <td>{{ items.status }}</td>
+    <td>{{ items.report}}</td>
+  </tr>
+</tbody>
+
+</table>
+</div>
+</div>
+<app-sidenav
+*ngFor="let item of sidenav"
+dashboardG="{{item.dashboardG}}"
+guest="{{item.guest}}"
+list="{{item.list}}"
+analytics="{{item.analytics}}"
+></app-sidenav>
+</body>
+
