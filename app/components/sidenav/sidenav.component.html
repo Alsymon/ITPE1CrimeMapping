@@ -1,0 +1,26 @@
+<div class="sidenav">
+    <div class="box">
+    <div class="sidenav-logo">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+    </div>
+    <div class="top-items">
+        <div>
+            <a *ngIf="dashboard" [href]="dashboard">Dashboard</a>
+        </div>
+        <div>
+            <a *ngIf="dashboardG" [href]="dashboardG">Dashboard</a>
+        </div>
+        <div>
+
+    <a *ngIf="list" [href]="list">List</a></div>
+    <div>
+    <a *ngIf="analytics" [href]="analytics">Analytics</a></div>
+    <div>
+    <a *ngIf="usermanagement" [href]="usermanagement">User-Management</a></div>
+    </div>
+    <div class="bottom-items">
+           <a *ngIf="guest" [href]="guest">Login</a>
+           <a *ngIf="admin" [href]="admin">Logout</a>
+    </div>
+</div>
