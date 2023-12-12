@@ -4,15 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
-import { LayoutComponent } from './layout/layout.component';
 import { LayoutModule } from './layout/layout.module';
-
-import { AnalyticsGComponent } from './analytics-g/analytics-g.component';
-import { DashboardGComponent } from './dashboard-g/dashboard-g.component';
 import { AnalyticsGModule } from './analytics-g/analytics-g.module';
 import { DashboardGModule } from './dashboard-g/dashboard-g.module';
 import { ListGModule } from './list-g/list-g.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AnalyticsGModule,
     ListGModule,
     DashboardGModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],  
   providers: [],
   bootstrap: [AppComponent]

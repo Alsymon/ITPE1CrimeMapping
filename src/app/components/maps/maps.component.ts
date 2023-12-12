@@ -59,8 +59,8 @@ export class MapComponent implements AfterViewInit {
     var colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#9900FF'];
 
     var crimeLabels = [
-      'Theft',
-      'Rape',
+      'Theft, waaa',
+      'Rape, waa',
       'Assault',
       'Drug Abuse',
       'Possession of Firearms',

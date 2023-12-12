@@ -3,6 +3,8 @@ import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { admin_card_data, admin_topnav_data, admin_sidenav_data, table_data } from 'src/shared_data/dashboard_data';
 import { CrimeModalComponent } from './crime-modal/crime-modal.component';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { DataService } from 'src/app/components/data.service';
 
 @Component({
   selector: 'app-list',
@@ -10,9 +12,14 @@ import { CrimeModalComponent } from './crime-modal/crime-modal.component';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-
-  constructor(private dialogRef : MatDialog){}
-
+  crimeData: any[];
+  constructor(private dialogRef: MatDialog, private httpClient: HttpClient, private dataService: DataService) {}
+  
+  ngOnInit(): void {
+    this.dataService.getAllCrimes().subscribe((data) => {
+      this.crimeData = data;
+    });
+  }
   openDialog() {
     this.dialogRef.open(CrimeModalComponent)
   }
@@ -36,26 +43,7 @@ export class ListComponent {
   resolutions: string[] = ['Resolved', 'Unresolved', 'In Progress', 'Closed'];
   users: { crime: string; location: string; date: string, status: string , report:string}[] = [];
 
-  addCrime() {
-    if (this.crime && this.location && this.date && this.status && this.report) {
-      this.users.push({ crime: this.crime,
-         location: this.location, 
-         date: this.date, 
-          status: this.status,
-          report: this.report
-        });
-        
-
-      this.crime = '';
-      this.location = '';
-      this.date = ''; 
-      this.status= 'Unresolved';
-      this.report= '';
-    
-      localStorage.setItem('userManagementData', JSON.stringify(this.users));
-
-    }
-  }
+  
 
   toggleAddCrimeForm() {
     this.showAddCrimeForm = !this.showAddCrimeForm;
@@ -79,11 +67,5 @@ export class ListComponent {
     this.users.splice(index, 1);
 
     localStorage.setItem('userManagementData', JSON.stringify(this.users));
-  }
-  ngOnInit() {
-    const storedData = localStorage.getItem('userManagementData');
-    if (storedData) {
-      this.users = JSON.parse(storedData);
-    }
   }
 }

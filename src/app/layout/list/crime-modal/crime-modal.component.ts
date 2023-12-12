@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-crime-modal',
@@ -7,6 +10,8 @@ import { Component } from '@angular/core';
 })
 export class CrimeModalComponent {
 
+  
+  constructor( private httpClient: HttpClient, private dialog: MatDialog) {}
 
 
   crime: string = 'Theft';
@@ -23,24 +28,38 @@ export class CrimeModalComponent {
 
   addCrime() {
     if (this.crime && this.location && this.date && this.status && this.report) {
-      this.users.push({ crime: this.crime,
-         location: this.location, 
-         date: this.date, 
-          status: this.status,
-          report: this.report
-        });
-        
+      const newCrime = {
+        crime: this.crime,
+        location: this.location,
+        date: this.date,
+        status: this.status,
+        report: this.report,
+      };
+  
+      // Set headers to specify content type as JSON
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  
+      this.httpClient.post('http://localhost:3000/crime-list/add-crime', newCrime, { headers })
+      .subscribe({
+        next: (response) => {
+          console.log('Crime added successfully:', response);
 
-      this.crime = '';
-      this.location = '';
-      this.date = ''; 
-      this.status= 'Unresolved';
-      this.report= '';
-    
-      localStorage.setItem('userManagementData', JSON.stringify(this.users));
+          this.dialog.closeAll();
 
-    }
-  }
+          // Update your local data or perform any other actions
+          this.users.push(newCrime);
+      
+          // Clear form fields
+          this.crime = '';
+          this.location = '';
+          this.date = '';
+          this.status = 'Unresolved';
+          this.report = '';
+        },
+        error: (error) => {
+          console.error('Error adding crime:', error);
+        }
+      });}}
 
   toggleAddCrimeForm() {
     this.showAddCrimeForm = !this.showAddCrimeForm;
@@ -56,5 +75,6 @@ export class CrimeModalComponent {
       this.users = JSON.parse(storedData);
     }
   }
+  
 
 }

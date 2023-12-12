@@ -21,10 +21,10 @@
       </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users; let i = index">
-      <td>{{ user.username }}</td>
-      <td>{{ user.passwordHidden ? '********' : user.password }}</td>
-      <td>{{user.position}}</td>
+    <tr *ngFor="let admin of adminData; let i = index">
+      <td>{{ admin.username }}</td>
+      <td>{{ admin.passwordHidden ? '********' : admin.password }}</td>
+      <td>{{admin.position}}</td>
       <td>
         <button class="btn btn-primary" style="margin-right: 10px;" (click)="togglePasswordVisibility(i)">Toggle Password</button>
         <button class="btn btn-primary"  style="margin-right: 10px;" (click)="deleteUser(i)">Delete</button>

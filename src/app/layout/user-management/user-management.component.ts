@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  MatDialog,} from '@angular/material/dialog';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { DataService } from 'src/app/components/data.service';
 import { admin_card_data, admin_topnav_data, admin_sidenav_data } from 'src/shared_data/dashboard_data';
 import { UserModalComponent } from './user-modal/user-modal.component';
 
@@ -10,8 +11,14 @@ import { UserModalComponent } from './user-modal/user-modal.component';
   styleUrls: ['./user-management.component.scss']
 })
 export class UserManagementComponent{
-
-  constructor(private dialogRef : MatDialog){}
+  adminData: any[];
+  constructor(private dialogRef: MatDialog, private httpClient: HttpClient, private dataService: DataService) {}
+   
+  ngOnInit(): void {
+    this.dataService.getAllAdmins().subscribe((data) => {
+      this.adminData = data.map(admin => ({ ...admin, passwordHidden: true }));
+    });
+  }
 
   openDialog() {
     this.dialogRef.open(UserModalComponent)
@@ -62,13 +69,6 @@ export class UserManagementComponent{
     localStorage.setItem('userManagementData', JSON.stringify(this.users));
   }
   togglePasswordVisibility(index: number) {
-    this.users[index].passwordHidden = !this.users[index].passwordHidden;
-    this.passwordInputType = this.users.some(user => !user.passwordHidden) ? 'text' : 'password';
-  }
-  ngOnInit() {
-    const storedData = localStorage.getItem('userManagementData');
-    if (storedData) {
-      this.users = JSON.parse(storedData);
-    }
+    this.adminData[index].passwordHidden = !this.adminData[index].passwordHidden;
   }
  }
