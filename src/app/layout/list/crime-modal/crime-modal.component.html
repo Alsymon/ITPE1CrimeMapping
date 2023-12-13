@@ -12,7 +12,9 @@
         </div>
         <div class="form-group">
           <label for="location">Location:</label>
-          <input type="text" [(ngModel)]="location" name="Location" id="location" class="form-control" placeholder="Location" required />
+          <select id="location" [(ngModel)]="location" name="location" class="form-control" required>
+            <option *ngFor="let loc of locations" [ngValue]="loc.name">{{ loc.name }}</option>
+          </select>
         </div>
         
         <div class="form-group">

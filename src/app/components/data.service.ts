@@ -22,4 +22,9 @@ export class DataService {
     const url = `${this.apiUrl}/delete/crime/:id${crimeId}`;
     return this.http.delete(url, { withCredentials: true });
   }
+
+  getCrimeById(crimeId: number): Observable<any> {
+    const url = `${this.apiUrl}/findCrime/${crimeId}`;
+    return this.http.get(url);
+  }
 }

@@ -27,6 +27,7 @@ export class UserModalComponent {
       const apiUrl = 'http://localhost:3000/user-management/add-admin';
   
       // Make an HTTP POST request to send user data to the server
+      
       this.http.post(apiUrl, newUser).subscribe({
         next: (response) => {
           console.log('User added successfully', response);
