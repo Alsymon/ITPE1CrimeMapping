@@ -64,7 +64,7 @@ export class CrimeModalComponent {
               this.users.push(newCrime);
   
               // Clear form fields
-              this.crime = '';
+              this.crime = 'Theft';
               this.location = '';
               this.date = '';
               this.status = 'Unresolved';
