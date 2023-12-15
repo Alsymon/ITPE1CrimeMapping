@@ -6,11 +6,12 @@ import { SharedComponentsModule } from 'src/app/components/shared-components.mod
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UserModalComponent } from './user-modal/user-modal.component';
+import { UserUpdateModalComponent } from './user-update-modal/user-update-modal.component';
 
 
 
 @NgModule({
-  declarations: [UserManagementComponent, UserModalComponent],
+  declarations: [UserManagementComponent, UserModalComponent, UserUpdateModalComponent],
   imports: [
     CommonModule,
     UserManagementRoutingModule,

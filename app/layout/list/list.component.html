@@ -29,10 +29,9 @@
           <td>{{ crime.report }}</td>
 
           <td>
-            <button class="btn btn-primary" style="margin-right: 10px;" (click)="editCrime(i)"
-              *ngIf="editingIndex !== i">Edit</button>
-            <button class="btn btn-primary" style="margin-right: 10px;" (click)="deleteCrime(i)">Delete</button>
-          </td>
+            <button class="btn btn-primary" style="margin-right: 10px;" (click)="updateModal()">Edit</button>
+              <button class="btn btn-primary" style="margin-right: 10px;" (click)="deleteCrime(crime.id)">Delete</button>
+                 </td>
 
         </tr>
       </tbody>
