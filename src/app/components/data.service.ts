@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, Observable } from 'rxjs';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,21 +11,35 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(error);
+  }
+
   getAllCrimes(): Observable<any[]> {
-    return this.http.post<any[]>(`${this.apiUrl}/findAllCrime/list`, {});
+    return this.http.post<any[]>(`${this.apiUrl}/findAllCrime/list`, {}).pipe(
+      catchError(this.handleError)
+    );
   }
 
   getAllAdmins(): Observable<any[]> {
-    return this.http.post<any[]>(`${this.apiUrl}/findAllAdmin/admin`, {});
+    return this.http.post<any[]>(`${this.apiUrl}/findAllAdmin/admin`, {}).pipe(
+      catchError(this.handleError)
+    );
   }
 
-  deleteCrime(crimeId: number): Observable<any> {
-    const url = `${this.apiUrl}/delete/crime/:id${crimeId}`;
-    return this.http.delete(url, { withCredentials: true });
-  }
-
-  getCrimeById(crimeId: number): Observable<any> {
-    const url = `${this.apiUrl}/findCrime/${crimeId}`;
+  getCrimeById(id: number): Observable<any> {
+    const url = `${this.apiUrl}/findCrime/${id}`;
     return this.http.get(url);
+  }
+
+  updateCrime(id: number, updatedCrimeData: any): Observable<any> {
+    const url = `${this.apiUrl}/update/crime/${id}`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.put(url, updatedCrimeData, { headers })
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 }

@@ -6,11 +6,12 @@ import { ListComponent } from './list.component';
 import { FormsModule } from '@angular/forms';
 import { CrimeModalComponent } from './crime-modal/crime-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { UpdateModalComponent } from './update-modal/update-modal.component';
 
 
 
 @NgModule({
-  declarations: [ListComponent, CrimeModalComponent, ],
+  declarations: [ListComponent, CrimeModalComponent, UpdateModalComponent, ],
   imports: [
     CommonModule,
     ListRoutingModule,

@@ -1,0 +1,36 @@
+<div class="card-body"> 
+  <form (ngSubmit)="updateCrime()">
+    <div class="form-group">
+      <label for="crime">Crime:</label>
+      <select id="crime" [(ngModel)]="crime" name="crime" class="form-control" required>
+        <option *ngFor="let cri of crimes" [ngValue]="cri">{{ cri }}</option>
+      </select>      
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <select id="location" [(ngModel)]="location" name="location" class="form-control" required>
+        <option *ngFor="let loc of locations" [ngValue]="loc.name">{{ loc.name }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" [(ngModel)]="date" name="Date" id="date" class="form-control" placeholder="Date" required />
+    </div>
+    
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select id="status" [(ngModel)]="status" name="status" class="form-control" required>
+        <option *ngFor="let res of resolutions" [value]="res">{{ res }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="report">Reported By:</label>
+      <input type="text" [(ngModel)]="report" name="report" id="report" class="form-control" placeholder="Report" required />
+    </div>
+    <br>   
+    <div class="form-group">
+      <button type="submit">Update Crime</button>
+    </div> 
+  </form>
+</div>

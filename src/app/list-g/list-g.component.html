@@ -20,15 +20,14 @@ account="{{item.account}}"
         </tr>
 </thead>
 <tbody>
-  <tr *ngFor="let items of tableData; let i = index">
-    <td>{{ items.crime }}</td>
-    <td>{{ items.location }}</td>
-    <td>{{ items.date }}</td>
-    <td>{{ items.status }}</td>
-    <td>{{ items.report}}</td>
+  <tr *ngFor="let crime of crimeData; let i = index">
+    <td>{{ crime.crime }}</td>
+    <td>{{ crime.location }}</td>
+    <td>{{ crime.date }}</td>
+    <td>{{ crime.status }}</td>
+    <td>{{ crime.report }}</td>
   </tr>
 </tbody>
-
 </table>
 </div>
 </div>

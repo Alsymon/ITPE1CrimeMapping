@@ -7,47 +7,32 @@
 <body>
     <div class="container">
         <div class="table-responsive">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2>Crime List Analystics</h2>
-                        </div>
-                    </div>
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Crime List Analytics</h2>
                 </div>
-                <table class="table table-striped table-hover">
-                    <tbody>
-                        <tr>
- 
-                            <td>Drug Use</td>
-                            <td>71</td>
- 
-                        </tr>
-                        <tr>
-                            <td>Theft</td>
-                            <td>31</td>
- 
-                        </tr>
-                        <tr>
-                            <td>Assault</td>
-                            <td>50</td>
- 
-                        </tr>
-                        <tr>
-                            <td>Rape</td>
-                            <td>17</td>
-                        </tr>					
-                        <tr>
-                            <td>Possesion of Firearms</td>
-                            <td>10</td>
-
-                        </tr> 
-                    </tbody>
-                </table>
+              </div>
             </div>
-        </div>        
-    </div>
-    
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Crime Type</th>
+                  <th>Total Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let crime of crimeData">
+                  <td>{{ crime.crimeType }}</td>
+                  <td>{{ crime.totalCount }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
 
     </body>
 
